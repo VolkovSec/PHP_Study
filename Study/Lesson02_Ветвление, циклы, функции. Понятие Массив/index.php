@@ -32,18 +32,18 @@
     <?php
         if ($d < 0)
         {
-            echo "Корней нет";
+            echo 'Корней нет';
         }
         elseif ($d == 0)
         {
-            echo "x =";
+            echo 'x =';
             echo (float)((-$b + sqrt($d))/(2*$a));
         }
         else
         {
-            echo "X<sub>1</sub> =";
-            echo (float)((-$b - sqrt($d))/(2*$a)) . "<br>";
-            echo "X<sub>2</sub> =";
+            echo 'X<sub>1</sub> =';
+            echo (float)((-$b - sqrt($d))/(2*$a)) . '<br>';
+            echo 'X<sub>2</sub> =';
             echo (float)((-$b + sqrt($d))/(2*$a));
         }
     ?>
@@ -55,8 +55,8 @@
 <H4>В операторе include используется Return</H4>
 <br>
 <?php
-$a = "Hello";
-$b = include "ReturnVal.php";
+$a = 'Hello';
+$b = include 'ReturnVal.php';
 ?>
 <br>
 ReturnVal.php добавил к строке др. строку и вернул результат в Index.php :
@@ -67,12 +67,12 @@ echo $b;
 <H4>В операторе include не используется Return</H4>
 <br>
 <?php
-$a = "World" . "<br>";
-$b = include "NoReturnVal.php";
-if ((bool)$b) echo "Файл успешно подключён" . "<br>";
+$a = 'World' . '<br>';
+$b = include 'NoReturnVal.php';
+if ((bool)$b) echo 'Файл успешно подключён' . '<br>';
 error_reporting(0);
 
-if (!(bool)include "NoFile.php") echo "Файл НЕ подключон";
+if (!(bool)include 'NoFile.php') echo 'Файл НЕ подключон';
 
 ?>
 <br>
@@ -112,17 +112,17 @@ $Name_list = ['Клавдия', 'Ольга', 'Наталья', 'Елена', '�
 
 $a = array_reduce($Name_list, function($frequency, $item)
                             {
-                                $frequency += strlen("ё")*substr_count(mb_strtolower($item), "ё");  //Определяю сколько бит занимает символ и * на кол-во этих символов в строке
+                                $frequency += strlen('ё')*substr_count(mb_strtolower($item), 'ё');  //Определяю сколько бит занимает символ и * на кол-во этих символов в строке
                                 return $frequency;
                             }
-                 ) . "<br>";
+                 ) . '<br>';
 
 $b = array_reduce($Name_list, function($frequency, $item)
                             {
                                 $frequency += strlen($item);  // Кол-во бит
                                 return $frequency;
                             }
-                 ) . "<br>";
+                 ) . '<br>';
 
 
 echo (float)($a/$b);
