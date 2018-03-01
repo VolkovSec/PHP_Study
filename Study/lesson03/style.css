@@ -1,0 +1,28 @@
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+body{
+    background-color: #f3f3f3;
+    align-content: center;
+}
+
+.all_content{
+    width: 1400px;
+    height: 100%; / высота для наглядности /
+margin: 0 auto; / задаем отступ слева и справа auto чтобы сработало выравнивание по центру /
+}
+.catalog_items{
+    background-color: #ffffff;
+    width: 1300px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.catalog_item{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px 0px 0px 20px;
+}
