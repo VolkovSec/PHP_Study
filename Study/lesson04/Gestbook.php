@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/Gestbook.php';
+//require_once __DIR__ . '/Gestbook.php';
 class Gestbook
 {
     protected $ChatPath;
     protected $Data;
-    protected $User;
+    public $User;
 
     public function __construct($ChatPath, $User)
     {
