@@ -1,5 +1,4 @@
 <?php
-//require_once __DIR__ . '/Gestbook.php';
 class Gestbook
 {
     protected $ChatPath;

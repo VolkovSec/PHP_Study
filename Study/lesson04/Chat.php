@@ -30,7 +30,7 @@ if (isset($_POST['name']) && isset($_POST['mess']))
     <?php $Chat->outData()?>
 </div>
 
-<form action="chat.php" method="POST">
+<form action="/lesson04/chat.php" method="POST">
     <br>
     Введите сообщение: <input type='text' id="name" name='name' readonly='' value='<?php echo $Chat->User ?>'>
     <br>
