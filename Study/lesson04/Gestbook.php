@@ -28,5 +28,8 @@ class Gestbook
         // Вернули из массива в файл предварительно разбив массив на строки
         file_put_contents(__DIR__ . '/data/'. $this->ChatPath . '.txt', implode(PHP_EOL, $this->Data));
     }
-
+    public function  outData()
+    {
+        foreach ($this->Data as $line) echo $line."<br>";
+    }
 }

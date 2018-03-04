@@ -1,8 +1,18 @@
 <?php require_once __DIR__ . '/Gestbook.php';
 
-$Chat = new Gestbook('messages',$_GET['name']);
+$Chat = new Gestbook('messages',$_POST['name']);
+if (isset($_POST['name']) && isset($_POST['mess']))
+    if ((strlen($_POST['name']) > 0) && (strlen($_POST['mess'])>0))
+    {
+        $Chat->append($_POST['mess']);
+        $Chat->save();
+    }
 ?>
+
 В процессе разработки....
+<br>
+<?php echo $_POST['name']." Hello!" ?>
+<br>
 <style>
     .chat{
         border-style: solid;
@@ -10,23 +20,17 @@ $Chat = new Gestbook('messages',$_GET['name']);
         padding: 10px;
     }
     #name{
-        border-width: 0px;
+        border: 0px;
     }
     #mess{
         width: 50pc;
     }
 </style>
 <div class ='chat'>
-    <?php
-    $lines = $Chat->getData();
-    foreach ($lines as $line) {?>
-    <article style='margin: 10px;'>
-        <?php echo $line;  ?>
-    </article>
-    <?php  } ?>
+    <?php $Chat->outData()?>
 </div>
 
-<form action="chat.php" method="post">
+<form action="chat.php" method="POST">
     <br>
     Введите сообщение: <input type='text' id="name" name='name' readonly='' value='<?php echo $Chat->User ?>'>
     <br>

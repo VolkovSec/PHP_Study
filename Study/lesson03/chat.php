@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (isset($_POST['name']) && isset($_POST['mess']))
 {
     // Открыли файл
@@ -12,5 +12,5 @@ if (isset($_POST['name']) && isset($_POST['mess']))
 
 }
 
-header('Location: http://192.168.7.25/lesson03/gest_book.php'.'?name='.$_POST['name']);
+header('Location: http://localhost/lesson03/gest_book.php'.'?name='.$_POST['name']);
 ?>

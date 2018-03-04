@@ -11,13 +11,11 @@
 ------------------------------------------------------------------------------------------
 <H2>Задание 1. Гостевая книга на Классах:</H2>
 ------------------------------------------------------------------------------------------
-</div>
-<form action="Chat.php" method="GET">
+<form action="chat.php" method="POST">
     <br>
-    Введите Имя: <input type='text' name='name' VALUE='<?php echo $_GET['name'] ?>'>
-    <button type="submit">Вход в чат</button>
+    <input type='text' name='name'>
+    <br>
+    <button type='submit'>Отправить</button>
 </form>
-<br>
-
 
 </body>
