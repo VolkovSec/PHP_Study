@@ -42,7 +42,7 @@ unset( $_GET['y']);
 ------------------------------------------------------------------------------------------
 
 </div>
-<form action="gest_book.php" method="GET">
+<form action="/lesson03/gest_book.php" method="GET">
     <br>
     Введите Имя: <input type='text' name='name' VALUE='<?php echo $_GET['name'] ?>'>
     <button type="submit">Вход в чат</button>

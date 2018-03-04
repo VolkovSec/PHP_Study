@@ -31,7 +31,7 @@ function Get_mess($ChatName)
         width: 50pc;
     }
 </style>
-<form action="chat.php" method="post">
+<form action="/lesson03/chat.php" method="post">
     <br>
     Введите сообщение: <input type='text' id="name" name='name' readonly='' value='<?php echo $_GET['name'] ?>'>
     <br>

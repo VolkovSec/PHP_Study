@@ -24,9 +24,9 @@
             }
         }
 ?>
+    </div>
 </div>
-</div>
-<form action="Upload.php" method="post" enctype="multipart/form-data">
+<form action="/lesson03/Upload.php" method="post" enctype="multipart/form-data">
     Выберите файл: <input type="file" name="picture">
     <br>
     <button type="submit" style="margin: 5px 5px 5px 5px;">Отправить</button>
