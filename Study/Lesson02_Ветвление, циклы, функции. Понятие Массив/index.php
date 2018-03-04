@@ -18,33 +18,36 @@
         {
             return $d = $b*$b - 4*$a*$c;
         }
+        $a = 1;
+        $b = -70;
+        $c = 600;
      ?>
 
-    a = <?php echo $a = 1; ?> <br>
-    b = <?php echo $b = -70; ?> <br>
-    c = <?php echo $c = 600; ?> <br>
+    a = 1;  <br>
+    b = -70; <br>
+    c = 600; <br>
     <br>
     D = b<sup>2</sup>-4*a*c
     <br>
-    <?php $d = (float)discriminant($a,$b,$c); ?>
+    <?php $d = discriminant($a,$b,$c); ?>
     D= <?php echo $d  ?>
     <br>
     <?php
         if ($d < 0)
         {
-            echo 'Корней нет';
+           ?> 'Корней нет'; <?php
         }
         elseif ($d == 0)
         {
-            echo 'x =';
-            echo (float)((-$b + sqrt($d))/(2*$a));
+            ?> x = <?php ;
+            echo (-$b + sqrt($d))/(2*$a);
         }
         else
         {
-            echo 'X<sub>1</sub> =';
-            echo (float)((-$b - sqrt($d))/(2*$a)) . '<br>';
-            echo 'X<sub>2</sub> =';
-            echo (float)((-$b + sqrt($d))/(2*$a));
+            ?> X<sub>1</sub> = <?php ;
+            echo (-$b - sqrt($d))/(2*$a) . '<br>';
+            ?> X<sub>2</sub> = <?php ;
+            echo (-$b + sqrt($d))/(2*$a);
         }
     ?>
 
@@ -56,7 +59,7 @@
 <br>
 <?php
 $a = 'Hello';
-$b = include 'ReturnVal.php';
+$b = include __DIR__.'\ReturnVal.php';
 ?>
 <br>
 ReturnVal.php добавил к строке др. строку и вернул результат в Index.php :
@@ -68,11 +71,11 @@ echo $b;
 <br>
 <?php
 $a = 'World' . '<br>';
-$b = include 'NoReturnVal.php';
-if ((bool)$b) echo 'Файл успешно подключён' . '<br>';
+$b = include __DIR__.'\NoReturnVal.php';
+if ((bool)$b) ?> Файл успешно подключён <br> <?php ;
 error_reporting(0);
 
-if (!(bool)include 'NoFile.php') echo 'Файл НЕ подключон';
+if (!(bool)include __DIR__.'\NoFile.php') ?>  Файл НЕ подключон <br> <?php ;
 
 ?>
 <br>
@@ -125,7 +128,7 @@ $b = array_reduce($Name_list, function($frequency, $item)
                  ) . '<br>';
 
 
-echo (float)($a/$b);
+echo ($a/$b);
 ?>
 
 </body>

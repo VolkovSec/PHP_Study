@@ -26,7 +26,7 @@
 <br>
 <?php
 if (isset($_GET['res'])){
-    echo  'Ответ: '.$_GET['res'];
+    ?>Ответ:<?php echo $_GET['res'];
 }
 else {
     $_GET['res'] = '';
